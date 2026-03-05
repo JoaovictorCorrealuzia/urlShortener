@@ -8,7 +8,7 @@ import java.time.LocalDateTime;
 
 
 @Document(collation = "urls")
-public class UrlRepositories {
+public class UrlEntity {
     @Id
     private String id;
 
@@ -17,7 +17,7 @@ public class UrlRepositories {
 
     private LocalDateTime expiresAt;
 
-    public UrlRepositories() {
+    public UrlEntity() {
     }
 
     public String getId() {
@@ -44,7 +44,7 @@ public class UrlRepositories {
         this.expiresAt = expiresAt;
     }
 
-    public UrlRepositories(String id, String fullurl, LocalDateTime expiresAt) {
+    public UrlEntity(String id, String fullurl, LocalDateTime expiresAt) {
         this.id = id;
         this.fullurl = fullurl;
         this.expiresAt = expiresAt;
